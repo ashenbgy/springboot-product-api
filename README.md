@@ -3,31 +3,31 @@
 ## Setup Instructions
 
 1. Clone the repository:
-   git clone https://github.com/ashenbgy/springboot-product-api.git
-   cd springboot-product-api
+    * git clone https://github.com/ashenbgy/springboot-product-api.git
+    * cd springboot-product-api
 
 2. Build and run the project
 
 3. Access the H2 Console:
 
-  URL: http://localhost:8080/h2-console
-  JDBC URL: jdbc:h2:mem:testdb
-  Username: sa
-  Password:
+  * URL: http://localhost:8080/h2-console
+   * JDBC URL: jdbc:h2:mem:testdb
+   * Username: sa
+   * Password:
 
 4. Test the API:
 
-Endpoint: [POST /products]
-http://localhost:8080/products/save-product
+ * Endpoint: [POST /products]
+ * http://localhost:8080/products/save-product
 
-  Example Request:
+   * Example Request:
   
     {
       "name": "Sample Product",
       "price": 20.00
     }
     
-  Response:
+   * Response:
     
     {
       "id": 1,
