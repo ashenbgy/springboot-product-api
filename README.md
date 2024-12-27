@@ -16,7 +16,7 @@
 
 4. Test the API:
 
-   * Example Request for Save [POST /products]:
+   * Example Request for Save [POST]:
       > http://localhost:8080/products/save-product
    
       > {
@@ -24,10 +24,10 @@
          "price": 20.00
       }
 
-   * Example Request for Get Products List with Pagination and Sorting:
+   * Example Request for Get Products List with Pagination and Sorting [GET]:
       > http://localhost:8080/products/get-products?pageNo=0&pageSize=2&sortBy=name&asc=false
    
-   * Example Request for Get Products List within a Price Range:
+   * Example Request for Get Products List within a Price Range [GET]:
       > http://localhost:8080/products/get-price-range?startingPrice=1000&endPrice=2000
   
 5. Dependencies
