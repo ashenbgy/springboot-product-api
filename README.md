@@ -9,8 +9,7 @@
 2. Build and run the project
 
 3. Access the H2 Console:
-
-  * URL: http://localhost:8080/h2-console
+   * URL: http://localhost:8080/h2-console
    * JDBC URL: jdbc:h2:mem:testdb
    * Username: sa
    * Password:
