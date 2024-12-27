@@ -21,14 +21,14 @@
 
    * Example Request:
   
-    {
+    > {
       "name": "Sample Product",
       "price": 20.00
     }
     
    * Response:
     
-    {
+    > {
       "id": 1,
       "name": "Sample Product",
       "price": 20.00,
