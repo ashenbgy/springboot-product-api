@@ -16,24 +16,19 @@
 
 4. Test the API:
 
- * Endpoint: [POST /products]
- * http://localhost:8080/products/save-product
+   * Example Request for Save [POST /products]:
+      > http://localhost:8080/products/save-product
+   
+      > {
+         "name": "Sample Product",
+         "price": 20.00
+      }
 
-   * Example Request:
-  
-    > {
-      "name": "Sample Product",
-      "price": 20.00
-    }
-    
-   * Response:
-    
-    > {
-      "id": 1,
-      "name": "Sample Product",
-      "price": 20.00,
-      "createdAt": "2024-12-27T10:00:00"
-    }
+   * Example Request for Get Products List with Pagination and Sorting:
+      > http://localhost:8080/products/get-products?pageNo=0&pageSize=2&sortBy=name&asc=false
+   
+   * Example Request for Get Products List within a Price Range:
+      > http://localhost:8080/products/get-price-range?startingPrice=1000&endPrice=2000
   
 5. Dependencies
    * Spring Boot 3.x
