@@ -7,10 +7,9 @@ import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/products")
@@ -28,5 +27,20 @@ public class ProductController {
         Product newProduct = productService.saveProduct(product);
 
         return new ResponseEntity<>(newProduct, HttpStatus.CREATED);
+    }
+
+    @GetMapping
+    @RequestMapping("/get-products")
+    public ResponseEntity<List<Product>> getAllProducts(@RequestParam int pageNo, @RequestParam int pageSize, @RequestParam(defaultValue = "name") String sortBy, @RequestParam boolean asc) {
+
+        List<Product> productList = productService.getAlLProducts(pageNo, pageSize, sortBy, asc);
+        return new ResponseEntity<>(productList, HttpStatus.OK);
+    }
+
+    @GetMapping
+    @RequestMapping("/get-price-range")
+    public ResponseEntity<List<Product>> getProductsByPriceRange(@RequestParam double startingPrice, @RequestParam double endPrice) {
+        List<Product> productList = productService.findByPriceBetween(startingPrice, endPrice);
+        return new ResponseEntity<>(productList, HttpStatus.OK);
     }
 }
